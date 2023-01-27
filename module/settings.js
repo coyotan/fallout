@@ -48,4 +48,12 @@ export function registerSettings() {
         default: false,
         type: Boolean,
     });
+    game.settings.register('fallout', 'movementEnabled', {
+        name: "Display Movement?",
+        hint: "Display movement on a player's character sheet?",
+        scope: "world",
+        config: true,
+        default: false,
+        type: Boolean,
+    });
 }
