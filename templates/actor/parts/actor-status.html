@@ -17,13 +17,13 @@
                 <label class="resource-label">{{localize "FALLOUT.TEMPLATES.INITIATIVE"}}</label>
                 <input class="num-short-2" type="number" name="system.initiative.value" value="{{system.initiative.value}}">
             </div>
-//This line is broken.
-            {{#ifCond game.settings.get('fallout','movementEnabled') '==' true}}
+//This line needs testing.
+            {{#ifMovementEnabled}}
             <div class="flexrow resource-row align-mid">
                 <label class="resource-label">{{localize "FALLOUT.TEMPLATES.MOVEMENT"}}</label>
                 <input class="num-short-2" type="number" name="system.movement.value" value="{{system.movement.value}}">
             </div>
-            {{/ifCond}}
+            {{/ifMovementEnabled}}
         </div>
 
         <div class="box">

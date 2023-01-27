@@ -133,4 +133,10 @@ export const registerHandlebarsHelpers = function () {
     return TextEditor.enrichHTML(rawText, {async: false})
   })
 
+  //A helper that might paint movement only if it's enabled in game settings? We'll see...
+  Handlebars.registerHelper('ifMovementEnabled', function(options) {
+    if (game.settings.get('fallout', 'movementEnabled')) {
+      options.fn(this)
+    }
+  })
 }
