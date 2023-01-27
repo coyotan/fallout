@@ -48,6 +48,12 @@ export class FalloutActor extends Actor {
       let dif = actorData.system.carryWeight.total - actorData.system.carryWeight.value
       actorData.system.encumbranceLevel = Math.ceil(dif / 50)
     }
+    
+    // Movement - Added by Coyotan#0962
+    let moves = parseint(this.system.attributes.agi.value)/2
+    moves = Math.floor(moves)
+    actorData.system.movement.value = moves + 4
+    console.log("EasilyFound: ", moves)
   }
 
   _calculateCharacterBodyResistance(actorData) {
@@ -211,6 +217,12 @@ export class FalloutActor extends Actor {
       let dif = actorData.system.carryWeight.total - actorData.system.carryWeight.value
       actorData.system.encumbranceLevel = Math.ceil(dif / 50)
     }
+
+    // Movement - Added by Coyotan#0962
+    let moves = parseint(this.system.attributes.agi.value)/2
+    moves = Math.floor(moves)
+    actorData.system.movement.value = moves + 4
+    console.log("EasilyFound: ", moves)
   }
 
   _calculateRobotBodyResistance(actorData) {
